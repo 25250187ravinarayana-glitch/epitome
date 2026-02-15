@@ -153,10 +153,11 @@ export const eventsData: Event[] = [
     category: "coding and debugging",
     teamSize: "2 members",
     rules: [
-      "Participants must have knowledge of programming languages such as C, C++, Python or Java",
+      "Participants must have knowledge of programming languages such as c, python and java",
       "Any form of malpractice will lead to immediate disqualification",
+      "Usage of electronic devices are strictly prohibited when the event commences.",
       "Personal laptops are not required",
-      "The judges’ decision is final"
+      "The judges’ decision will be final."
     ],
     coordinators: [
       {

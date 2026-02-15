@@ -6,8 +6,12 @@ import { Download } from "lucide-react";
 
 export const RegistrationSection = () => {
   const handleBrochureDownload = () => {
-    // TODO: Add Cloudinary URL for brochure download
-    console.log("Brochure download - URL to be added");
+    const brochureLink = process.env.NEXT_PUBLIC_BROCHURE_LINK;
+    if (brochureLink) {
+      window.open(brochureLink, "_blank");
+    } else {
+      console.log("Brochure download URL not configured");
+    }
   };
 
   const handleRegistration = () => {
@@ -96,16 +100,11 @@ export const RegistrationSection = () => {
                   EPITOME
                 </p>
                 <p className="font-mono text-xs text-st-darker">
-                  St Aloysius Institute
+                  AIMIT
                 </p>
               </div>
 
-              {/* Coming Soon Badge */}
-              <div className="mt-3 text-center">
-                <span className="inline-block rounded-full border-2 border-st-red bg-st-red px-3 py-1 font-mono text-xs text-white">
-                  Coming Soon
-                </span>
-              </div>
+              
             </div>
           </div>
 
