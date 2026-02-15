@@ -18,4 +18,4 @@ export const sponsorsData: Sponsor[] = [
   // },
 ];
 
-export const SPONSOR_CONTACT_EMAIL = "sponsors@epitome.com";
+export const SPONSOR_CONTACT_EMAIL = "epitome@staloysius.ac.in";

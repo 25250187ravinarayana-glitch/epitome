@@ -11,14 +11,14 @@ export const RegistrationSection = () => {
   };
 
   const handleRegistration = () => {
-    // TODO: Add registration form URL
-    window.open("https://docs.google.com/forms/d/e/1FAIpQLSeiNjEekjoymokK0UC7T2TCsxkoJtvWEdlYncVGZgvO1_vxrA/viewform", "_blank");
+    const registrationLink = process.env.NEXT_PUBLIC_REGISTRATION_LINK || "https://docs.google.com/forms/d/e/1FAIpQLSeiNjEekjoymokK0UC7T2TCsxkoJtvWEdlYncVGZgvO1_vxrA/viewform";
+    window.open(registrationLink, "_blank");
   };
 
   return (
     <section
       id="register"
-      className="relative min-h-screen py-12 px-4 md:py-20"
+      className="relative min-h-screen py-20 px-4"
       style={{
         backgroundImage: "url('/images/bg2.jpg')",
         backgroundSize: "cover",
@@ -31,7 +31,7 @@ export const RegistrationSection = () => {
 
       <div className="relative z-10 mx-auto max-w-7xl">
         {/* Section Header Image */}
-        <div className="mb-8 md:mb-10">
+        <div className="mb-12 md:mb-16">
           <div className="relative mx-auto h-20 w-80 max-w-4xl md:h-56 lg:h-64">
             <Image
               src="/titles/join.png"
@@ -44,45 +44,8 @@ export const RegistrationSection = () => {
         </div>
 
         {/* Main Content */}
-        <div className="grid grid-cols-1 gap-6 lg:grid-cols-2 lg:gap-10">
-          {/* Left Side - Registration CTA */}
-          <div className="flex flex-col justify-center space-y-4">
-            <h3 className="font-benguiat text-2xl font-bold text-st-cream md:text-3xl lg:text-4xl">
-              Secure Your Spot in the Upside Down
-            </h3>
-            
-            <p className="font-mono text-base text-st-text leading-relaxed md:text-lg">
-              Register now and be part of EPITOME 2026. Experience mysterious challenges,
-              mind-bending competitions, and extraordinary events that await you.
-            </p>
-
-            {/* Register Button */}
-            <button
-              onClick={handleRegistration}
-              className="group relative w-full overflow-hidden rounded-lg border-4 border-st-red bg-st-red px-6 py-4 font-benguiat text-xl font-bold text-white shadow-lg transition-all duration-300 hover:bg-st-red-light hover:shadow-st-red/50 md:w-auto md:text-2xl"
-            >
-              <span className="relative z-10">REGISTER</span>
-              <div className="absolute inset-0 -translate-x-full bg-linear-to-r from-transparent via-white/20 to-transparent transition-transform duration-500 group-hover:translate-x-full" />
-            </button>
-
-            {/* Additional Info */}
-            <div className="space-y-1.5 font-mono text-xs text-st-text-dim md:text-sm">
-              <p className="flex items-center gap-2">
-                <span className="text-st-red">→</span>
-                No registration fees
-              </p>
-              <p className="flex items-center gap-2">
-                <span className="text-st-red">→</span>
-                Limited slots available
-              </p>
-              <p className="flex items-center gap-2">
-                <span className="text-st-red">→</span>
-                Open to all college students
-              </p>
-            </div>
-          </div>
-
-          {/* Right Side - Brochure Card */}
+        <div className="grid grid-cols-1 gap-8 lg:grid-cols-2 lg:gap-12 items-center">
+          {/* Left Side - Brochure Card */}
           <div className="flex items-center justify-center">
             <div
               onClick={handleBrochureDownload}
@@ -116,7 +79,7 @@ export const RegistrationSection = () => {
               {/* Event Date */}
               <div className="mb-3 text-center">
                 <p className="font-benguiat text-xl text-st-black md:text-2xl">
-                  MAR 15-16
+                  MAR 10
                 </p>
               </div>
 
@@ -145,17 +108,54 @@ export const RegistrationSection = () => {
               </div>
             </div>
           </div>
+
+          {/* Right Side - Registration CTA */}
+          <div className="flex flex-col justify-center space-y-6">
+            <h3 className="font-benguiat text-3xl font-bold text-st-cream md:text-4xl lg:text-5xl">
+              Secure Your Spot 
+            </h3>
+            
+            <p className="font-mono text-base text-st-text leading-relaxed md:text-lg">
+              Register now and be part of EPITOME 2026. Experience mysterious challenges,
+              mind-bending competitions, and extraordinary events that await you.
+            </p>
+
+            {/* Register Button */}
+            <button
+              onClick={handleRegistration}
+              className="group relative w-full overflow-hidden rounded-lg border-4 border-st-red bg-st-red px-8 py-4 font-benguiat text-2xl font-bold text-white shadow-lg transition-all duration-300 hover:bg-st-red-light hover:shadow-st-red/50"
+            >
+              <span className="relative z-10">REGISTER</span>
+              <div className="absolute inset-0 -translate-x-full bg-linear-to-r from-transparent via-white/20 to-transparent transition-transform duration-500 group-hover:translate-x-full" />
+            </button>
+
+            {/* Additional Info */}
+            <div className="space-y-1.5 font-mono text-xs text-st-text-dim md:text-sm">
+              <p className="flex items-center gap-2">
+                <span className="text-st-red">→</span>
+                No registration fees
+              </p>
+              <p className="flex items-center gap-2">
+                <span className="text-st-red">→</span>
+                Limited slots available
+              </p>
+              <p className="flex items-center gap-2">
+                <span className="text-st-red">→</span>
+                Open to all ug college students
+              </p>
+            </div>
+          </div>
         </div>
 
         {/* Bottom Contact Info */}
-        <div className="mt-8 text-center">
+        <div className="mt-12 text-center">
           <p className="font-mono text-sm text-st-text-dim">
             For any queries or help, contact us at{" "}
             <a
-              href="mailto:info@epitome.com"
+              href="mailto:epitome@staloysius.ac.in"
               className="text-st-red underline transition-colors hover:text-st-red-light"
             >
-              info@epitome.com
+              epitome@staloysius.ac.in
             </a>
           </p>
         </div>

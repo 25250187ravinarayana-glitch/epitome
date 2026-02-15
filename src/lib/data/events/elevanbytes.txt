@@ -1,0 +1,23 @@
+Eleven Bytes
+Coding and Debugging
+In the depths of a forgotten digital vault, fragments of logic lie scattered like hidden treasure.
+Eleven Bytes challenges participants to move beyond ordinary coding and navigate
+encrypted patterns, layered puzzles, and concealed reasoning. Every line holds a clue, every
+output carries meaning, and only precise thinking can unlock the path forward. This is not
+just problem-solving—it is a strategic hunt through logic, where clarity, accuracy, and
+composure lead to the ultimate prize: mastery over complexity.
+Team Size – 2 People
+Guidelines:
+• Participants must have knowledge of programming languages such as c, c++ , python
+or java.
+• Any form of malpractice will lead to immediate disqualification
+• Personal laptops are not required
+• The judges’ decision is final
+Contact:
+Ravinarayana U – 9037152399
+K S Panka – 85508 55771
+Merel Riha Dsouza - 7259177448
+
+Staff
+Dr Santhosh B
+Dr Jeevan L J Pinto

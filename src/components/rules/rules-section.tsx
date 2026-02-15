@@ -13,9 +13,9 @@ export const RulesSection = () => {
       <div className="mx-auto max-w-5xl">
         {/* Document Header */}
         <div className="mb-2 text-center">
-          <div className="relative mx-auto  h-60 w-full max-w-3xl">
+          <div className="relative mx-auto  h-30 w-full max-w-3xl">
             <Image
-              src="/svg/classified.png"
+              src="/titles/classified.png"
               alt="Classified"
               fill
               className="object-contain h-60 w-full"

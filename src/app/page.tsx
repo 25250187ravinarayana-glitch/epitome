@@ -41,6 +41,13 @@ const RegistrationSection = dynamic(
     )
 );
 
+const CoordinatorsSection = dynamic(
+  () =>
+    import("@/components/coordinators/coordinators-section").then(
+      (mod) => mod.CoordinatorsSection
+    )
+);
+
 export default function Home() {
   return (
     <main className="min-h-screen bg-st-black">
@@ -50,6 +57,7 @@ export default function Home() {
       {/*<SponsorsSection />*/}
       <MapSection />
       <RegistrationSection />
+      <CoordinatorsSection />
       
       {/* Footer */}
       <footer className="bg-st-darker py-8 text-center">

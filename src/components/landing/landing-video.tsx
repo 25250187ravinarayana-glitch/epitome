@@ -70,10 +70,13 @@ const animationUtils = {
 export const LandingVideo = memo(() => {
   const containerRef = useRef<HTMLDivElement>(null);
   const letterRefs = useRef<HTMLSpanElement[]>([]);
+  const yearRefs = useRef<HTMLSpanElement[]>([]);
   const [isLoaded, setIsLoaded] = useState(false);
 
   const text = "EPITOME";
+  const year = "2026";
   const letters = text.split("");
+  const yearLetters = year.split("");
 
   useLayoutEffect(() => {
     if (!isLoaded) return;
@@ -83,11 +86,28 @@ export const LandingVideo = memo(() => {
         letterRefs,
         letters
       );
-      timeline.play();
+      
+      // Animate year after main title
+      const yearTimeline = gsap.timeline();
+      gsap.set(yearRefs.current, { opacity: 0, y: 50 });
+      
+      yearRefs.current.forEach((digit, index) => {
+        const delay = (letters.length * 0.1) + (index * 0.08);
+        yearTimeline.to(
+          digit,
+          {
+            opacity: 1,
+            y: 0,
+            duration: 0.4,
+            ease: "power2.out",
+          },
+          delay
+        );
+      });
     }, containerRef);
 
     return () => ctx.revert();
-  }, [isLoaded, letters]);
+  }, [isLoaded, letters, yearLetters]);
 
   React.useEffect(() => {
     setIsLoaded(true);
@@ -109,7 +129,7 @@ export const LandingVideo = memo(() => {
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <Image
-          src="/images/124601-3840x2160-desktop-4k-stranger-things-wallpaper-image.jpg"
+          src="/images/epitomelanding.jpg"
           alt="Stranger Things Background"
           fill
           priority
@@ -117,14 +137,19 @@ export const LandingVideo = memo(() => {
           quality={90}
         />
         {/* Dark overlay for better text visibility */}
-        <div className="absolute inset-0 bg-black/50" />
+        <div className="absolute inset-0 bg-black/40" />
       </div>
 
       {/* VHS Effect Overlay */}
       <div className="vhs-effect absolute inset-0 z-10" />
 
       {/* College Logo */}
-      <div className="absolute left-4 top-4 z-20 h-16 w-16 md:h-20 md:w-20">
+      <a
+        href="https://drive.google.com/file/d/1F9nqUA9ZRwgPo5ZsZwWaXTZv61b7h6m8/view?usp=sharing"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="absolute left-4 top-4 z-20 h-16 w-16 md:h-20 md:w-20 cursor-pointer transition-transform hover:scale-110"
+      >
         <Image
           src="/clg/clglogo.png"
           alt="College Logo"
@@ -132,11 +157,11 @@ export const LandingVideo = memo(() => {
           className="object-contain"
           priority
         />
-      </div>
+      </a>
 
       {/* Animated Title */}
       <div className="relative z-20 flex flex-col items-center justify-center px-4">
-        <h1 className="flex flex-wrap justify-center gap-2 font-benguiat text-6xl font-bold tracking-wider text-st-text sm:text-7xl md:text-8xl lg:text-9xl">
+        <h1 className="flex flex-wrap justify-center gap-2 font-benguiat text-6xl font-bold tracking-wider text-white sm:text-7xl md:text-8xl lg:text-9xl">
           {letters.map((letter, index) => (
             <span
               key={index}
@@ -150,14 +175,43 @@ export const LandingVideo = memo(() => {
           ))}
         </h1>
 
+        {/* Year */}
+        <div className="flex items-center gap-4 mt-2">
+          {/* Left Line */}
+          <div className="h-0.5 w-12 bg-st-red glow-red sm:w-16 md:w-20"></div>
+          
+          {/* Year Text */}
+          <div className="flex gap-1 font-benguiat text-3xl font-bold tracking-wider text-white sm:text-4xl md:text-5xl lg:text-6xl">
+            {yearLetters.map((digit, index) => (
+              <span
+                key={index}
+                ref={(el) => {
+                  if (el) yearRefs.current[index] = el;
+                }}
+                className="inline-block glow-red"
+              >
+                {digit}
+              </span>
+            ))}
+          </div>
+          
+          {/* Right Line */}
+          <div className="h-0.5 w-12 bg-st-red glow-red sm:w-16 md:w-20"></div>
+        </div>
+
         {/* Subtitle */}
         <p className="mt-8 text-center font-mono text-lg text-st-text-dim md:text-xl">
-          Strange Events • Stranger Challenges
+          An intercollegiate fest
         </p>
 
         {/* Event Date */}
         <p className="mt-4 rounded-lg border border-st-red bg-st-darker/80 px-6 py-2 font-mono text-sm text-st-cream backdrop-blur-sm">
           March 10, 2026
+        </p>
+
+        {/* Organized By */}
+        <p className="mt-6 font-mono text-xs text-st-text-dim">
+          Organised by AIMIT
         </p>
       </div>
 

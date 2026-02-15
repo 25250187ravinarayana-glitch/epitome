@@ -1,6 +1,7 @@
 "use client";
 
 import * as React from "react";
+import { usePathname } from "next/navigation";
 import {
   Menu,
   X,
@@ -51,13 +52,19 @@ const NavItem = ({ icon, label, href, setOpen }: NavItemProps) => {
 
 export function NavigationBar() {
   const [open, setOpen] = React.useState(false);
+  const pathname = usePathname();
+
+  // Hide navbar on event detail pages
+  if (pathname.startsWith("/event/")) {
+    return null;
+  }
 
   return (
     <div className="fixed right-4 top-4 z-5000">
       <Drawer open={open} onOpenChange={setOpen}>
         <DrawerTrigger asChild>
           <Button className="glow-red-pulse rounded-xl border-2 border-st-red bg-st-black text-st-text hover:bg-st-red hover:text-white">
-            Menu <Menu className="ml-2 inline-block" />
+             <Menu className=" inline-block" />
           </Button>
         </DrawerTrigger>
         <DrawerContent className="border-st-red bg-st-dark">
@@ -93,17 +100,23 @@ export function NavigationBar() {
                 label="Rules"
                 href="#rules"
               />
-              <NavItem
+              {/*<NavItem
                 setOpen={setOpen}
                 icon={<Award />}
                 label="Sponsors"
                 href="#sponsors"
-              />
+              />*/}
               <NavItem
                 setOpen={setOpen}
                 icon={<MapPin />}
                 label="Location"
                 href="#map"
+              />
+              <NavItem
+                setOpen={setOpen}
+                icon={<MapPin />}
+                label="Register"
+                href="#register"
               />
             </div>
           </div>

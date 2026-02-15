@@ -20,8 +20,8 @@ export const MapSection = () => {
       
       <div className="relative mx-auto max-w-7xl">
         {/* Section Header */}
-        <div className="mb-2 text-center">
-          <div className="relative mx-auto mb-2 h-40 w-80 max-w-2xl">
+        <div className="mb-8 text-center">
+          <div className="relative mx-auto  h-40 w-80 max-w-2xl">
             <Image
               src="/titles/location.png"
               alt="Location"
@@ -48,7 +48,7 @@ export const MapSection = () => {
           </div>
 
           {/* Location Details */}
-          <div className="mt-8 rounded-lg border-2 border-st-red bg-st-darker/50 p-6 backdrop-blur-sm">
+          <div className="mt-12 rounded-lg border-2 border-st-red bg-st-darker/50 p-6 backdrop-blur-sm">
             <div className="grid gap-6 md:grid-cols-2">
               <div>
                 <h3 className="mb-3 font-benguiat text-xl font-bold text-st-cream">
@@ -67,9 +67,8 @@ export const MapSection = () => {
                   Contact Information
                 </h3>
                 <p className="font-mono text-st-text">
-                  <strong>Phone:</strong> +91 1234567890
-                  <br />
-                  <strong>Email:</strong> events@epitome.com
+                  
+                  <strong>Email:</strong> epitome@staloysius.ac.in
                   <br />
                   <strong>Hours:</strong> 9:00 AM - 6:00 PM
                 </p>
@@ -79,7 +78,7 @@ export const MapSection = () => {
         </div>
 
         {/* Directions Note */}
-        <div className="mt-8 text-center">
+        <div className="mt-12 text-center">
           <div className="inline-flex items-center gap-6 rounded-lg border border-st-red/30 bg-st-darker/50 px-6 py-3 backdrop-blur-sm">
             <span className="font-mono text-sm text-st-text">Free parking available</span>
             <span className="text-st-red">•</span>

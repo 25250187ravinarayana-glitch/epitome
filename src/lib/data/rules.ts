@@ -7,26 +7,21 @@ export type Rule = {
 export const generalRules: Rule[] = [
   {
     id: "g1",
-    text: "Open to all college students with valid ID cards.",
+    text: "Only for BCA, BSC and undergraduate students.",
     icon: "→",
   },
   {
     id: "g2",
-    text: "Maximum team size: 4 members per team.",
+    text: "A maximum of two teams per department from each college is allowed to participate in each event.",
     icon: "→",
   },
   {
     id: "g3",
-    text: "Registration closes 2 days before the event.",
+    text: "There will be no registration fees.",
     icon: "→",
   },
   {
     id: "g4",
-    text: "Individual participation allowed for all events.",
-    icon: "→",
-  },
-  {
-    id: "g5",
     text: "No registration fees - completely free entry.",
     icon: "→",
   },

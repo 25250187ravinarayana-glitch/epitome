@@ -2,10 +2,11 @@
 
 import React from "react";
 import Image from "next/image";
-import Link from "next/link";
+// import Link from "next/link";
 import { useRouter, useParams } from "next/navigation";
 import { eventsData } from "@/lib/data/events";
-import { ArrowLeft, PhoneCall } from "lucide-react";
+import { ArrowLeft } from "lucide-react";
+// import { PhoneCall } from "lucide-react";
 
 export default function EventDetailPage() {
   const router = useRouter();
@@ -64,15 +65,7 @@ export default function EventDetailPage() {
 
         {/* Event Content */}
         <div className="mx-auto max-w-4xl px-4 py-8 pb-20">
-          {/* Event Image */}
-          <div className="relative mb-8 h-80 w-full overflow-hidden rounded-lg border-4 border-st-red shadow-2xl">
-            <Image
-              src={event.image}
-              alt={event.title}
-              fill
-              className="object-contain bg-white p-4"
-            />
-          </div>
+          
 
           {/* Event Title */}
           <h1 className="mb-4 font-benguiat text-4xl font-bold text-white md:text-5xl lg:text-6xl">
@@ -107,7 +100,7 @@ export default function EventDetailPage() {
               </div>
               <div>
                 <p className="font-mono text-st-text">
-                  <strong className="text-white">Time:</strong> {event.time}
+                  <strong className="text-white">Team Size:</strong> {event.teamSize}
                 </p>
               </div>
               <div>
@@ -130,30 +123,32 @@ export default function EventDetailPage() {
               Event Rules
             </h2>
             <ul className="list-inside list-disc space-y-3 font-mono text-st-text">
-              <li>All participants must register before the event</li>
-              <li>Bring valid college ID card</li>
-              <li>Follow organizer instructions at all times</li>
-              <li>Maintain event decorum and respect fellow participants</li>
-              <li>Judges decision will be final</li>
+              {event.rules.map((rule, index) => (
+                <li key={index}>{rule}</li>
+              ))}
             </ul>
           </div>
 
-          {/* Contact Section */}
+          {/* Coordinators Section */}
           <div className="rounded-lg border-2 border-st-red bg-st-darker/90 p-6 backdrop-blur-sm">
             <h2 className="mb-6 font-benguiat text-2xl font-bold text-white md:text-3xl">
-              Contact Information
+              Student Coordinators
             </h2>
             <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
               {event.coordinators.map((coordinator, index) => (
                 <div key={index} className="rounded-lg border border-st-red/50 bg-st-black/50 p-4">
-                  <p className="mb-3 font-mono text-lg text-white">
-                    <strong>Coordinator {index + 1}:</strong> {coordinator.name}
+                  <p className="mb-2 font-mono text-lg text-white font-bold">
+                    {coordinator.name}
                   </p>
-                  <p className="mb-4 font-mono text-st-text">
+                  {coordinator.phone && (
+                    <p className="font-mono text-st-text">
+                      <strong className="text-white">Phone:</strong> {coordinator.phone}
+                    </p>
+                  )}
+                  {/* <p className="mb-4 font-mono text-st-text">
                     <strong className="text-white">Email:</strong> {coordinator.email}
                   </p>
                   <div className="flex flex-wrap gap-2 sm:flex-col sm:gap-3">
-                    {/* Phone Button */}
                     <Link
                       href={`tel:+91${coordinator.phone}`}
                       target="_blank"
@@ -163,7 +158,6 @@ export default function EventDetailPage() {
                       Call
                     </Link>
                     
-                    {/* WhatsApp Button */}
                     <Link
                       href={`https://wa.me/91${coordinator.phone}`}
                       target="_blank"
@@ -180,7 +174,27 @@ export default function EventDetailPage() {
                       </svg>
                       WhatsApp
                     </Link>
-                  </div>
+                  </div> */}
+                </div>
+              ))}
+            </div>
+          </div>
+          <div className="mt-6 rounded-lg border-2 border-st-red bg-st-darker/90 p-6 backdrop-blur-sm">
+            <h2 className="mb-6 font-benguiat text-2xl font-bold text-white md:text-3xl">
+              Staff Coordinators
+            </h2>
+            <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
+              {event.staffcoordinators.map((coordinator, index) => (
+                <div key={index} className="rounded-lg border border-st-red/50 bg-st-black/50 p-4">
+                  <p className="mb-2 font-mono text-lg text-white font-bold">
+                    {coordinator.name}
+                  </p>
+                  {coordinator.phone && (
+                    <p className="font-mono text-st-text">
+                      <strong className="text-white">Phone:</strong> {coordinator.phone}
+                    </p>
+                  )}
+                  
                 </div>
               ))}
             </div>

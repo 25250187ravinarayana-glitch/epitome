@@ -14,7 +14,7 @@ export const EventsSection = () => {
       {/* Section Header */}
       <div className="mx-auto max-w-7xl">
         <div className="mb-6 text-center">
-          <div className="relative mx-auto mb-4 h-40 w-full max-w-2xl">
+          <div className="relative mx-auto mb-8 h-30 w-full max-w-2xl">
             <Image
         
               src="/titles/events.png"
@@ -23,13 +23,7 @@ export const EventsSection = () => {
               className="object-contain h-60 w-full"
             />
           </div>
-          <p className="font-mono text-lg text-st-text-dim">
-            HAVE YOU SEEN THESE CHALLENGES?
-          </p>
-          <div className="mt-2 flex flex-col items-center gap-2 font-mono text-sm text-st-cream">
-            <p>Last seen: {EVENT_DATE}</p>
-            <p>Location: {EVENT_VENUE}</p>
-          </div>
+          
         </div>
 
         {/* Event Cards Grid */}
@@ -52,17 +46,17 @@ const EventCard = ({
 }) => {
   return (
     <div
-      className="group relative mx-auto w-full max-w-sm transition-transform duration-300 hover:scale-105"
+      className="group relative mx-auto w-full max-w-sm transition-transform duration-300 hover:scale-105 flex flex-col h-full"
       style={{
         animationDelay: `${index * 0.2}s`,
       }}
     >
       {/* Paper Background with tape effect */}
-      <div className="relative rounded-lg border-4 border-st-darker bg-st-cream p-6 shadow-2xl">
+      <div className="relative rounded-lg border-4 border-st-darker bg-st-cream p-6 shadow-2xl flex flex-col h-full">
         {/* Logo and Title Image - centered at same level */}
         <div className="mb-4 flex items-center justify-center gap-4 border-b-4 border-dashed border-st-darker pb-4">
           {/* Logo */}
-          <div className="relative h-20 w-20 flex-shrink-0 border-4 border-st-darker bg-white shadow-lg">
+          <div className="relative h-20 w-20 shrink-0">
             <Image
               src={event.logo}
               alt={event.title}
@@ -74,7 +68,7 @@ const EventCard = ({
           {/* Title Image */}
           <div className="relative h-20 flex-1">
             <Image
-              src={event.image}
+              src={event.titleimg}
               alt={event.title}
               fill
               className="object-contain"
@@ -83,9 +77,9 @@ const EventCard = ({
         </div>
 
         {/* Stranger Things Themed Background Image */}
-        <div className="relative mb-4 h-48 w-full overflow-hidden rounded border-4 border-st-darker bg-white">
+        <div className="relative mb-4 h-42 w-full overflow-hidden rounded border-4 border-st-darker bg-white">
           <Image
-            src={event.titleimg}
+            src={event.image}
             alt={`${event.title} background`}
             fill
             className="object-cover"
@@ -93,30 +87,28 @@ const EventCard = ({
         </div>
 
         {/* Event Title */}
-        <h4 className="mb-2 font-benguiat text-2xl font-bold text-st-black">
-          {event.title}
+        <h4 className="mb-2 font-benguiat text-xl font-bold text-st-black">
+          {event.category}
         </h4>
 
         {/* Event Details */}
-        <div className="mb-4 space-y-1 font-mono text-sm text-st-black">
-          <p>
+        <div className="mb-4 space-y-1 font-mono text-xs text-st-black grow overflow-hidden">
+          <p className="line-clamp-6 relative">
             <strong>Description:</strong> {event.description}
+            <div className="absolute inset-0 bg-linear-to-b from-transparent via-transparent to-st-cream pointer-events-none"></div>
           </p>
           <p>
             <strong>Date:</strong> {event.date}
           </p>
           <p>
-            <strong>Time:</strong> {event.time}
-          </p>
-          <p>
-            <strong>Venue:</strong> {event.venue}
+            <strong>Team Size:</strong> {event.teamSize}
           </p>
         </div>
 
         {/* View More Button */}
         <Link
           href={`/event/${event.id}`}
-          className="block w-full rounded bg-st-red px-6 py-3 text-center font-benguiat text-lg font-bold text-white shadow-lg transition-all hover:bg-st-red-light hover:shadow-xl"
+          className="block w-full rounded bg-st-red px-6 py-3 text-center font-benguiat text-lg font-bold text-white shadow-lg transition-all hover:bg-st-red-light hover:shadow-xl mt-auto"
         >
           VIEW MORE
         </Link>
