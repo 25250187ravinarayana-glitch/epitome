@@ -45,7 +45,7 @@ const facultyCoordinators: Coordinator[] = [
     name: "Mr. Aravinda Prabu S",
     role: "Faculty Coordinator",
     phone: "9986263916",
-    image: "/pfp/aravindsir.jpg",
+    image: "/pfp/Aravindsir.jpg",
   },
   {
     name: "Ms. Gana K V",

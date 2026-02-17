@@ -15,7 +15,7 @@ export const RegistrationSection = () => {
   };
 
   const handleRegistration = () => {
-    const registrationLink = process.env.NEXT_PUBLIC_REGISTRATION_LINK || "https://docs.google.com/forms/d/e/1FAIpQLSeiNjEekjoymokK0UC7T2TCsxkoJtvWEdlYncVGZgvO1_vxrA/viewform";
+    const registrationLink = process.env.NEXT_PUBLIC_REGISTRATION_LINK ;
     window.open(registrationLink, "_blank");
   };
 

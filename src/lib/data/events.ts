@@ -101,8 +101,18 @@ export const eventsData: Event[] = [
     venue: "",
     registerLink: REGISTRATION_LINK,
     category: "gaming",
-    teamSize: "BGMI: 4 members, Other games: Individual",
+    teamSize: "4 members",
     rules: [
+      "Gaming tournament featuring three titles: BGMI, FIFA, and Mortal Kombat",
+      "Includes one mobile game (BGMI), one PC game (FIFA), and one console game (Mortal Kombat)",
+      "Total 24 teams allowed to participate",
+      "Each team must have 4 members",
+      "All teams will compete in all three games",
+      "BGMI: full 4-member squad participates",
+      "FIFA & Mortal Kombat: team must split into two pairs (2 players each)",
+      "One pair will play FIFA and the other pair will play Mortal Kombat",
+      "No custom controllers allowed (standard provided equipment only)",
+      "Participants are requested to bring their own peripherals such as headsets, finger gloves, and any other accessories as per their choice.",
       "Participants must report on time",
       "Players must use their own devices for mobile games",
       "Detailed rules will be shared on the spot before registration",
@@ -178,7 +188,7 @@ export const eventsData: Event[] = [
     ],
     staffcoordinators:[
       {
-        name: "Dr. Srinivas B.L",
+        name: "Dr Santhosh B",
         phone: "",
         email: "",
       },

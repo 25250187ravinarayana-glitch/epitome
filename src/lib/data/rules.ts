@@ -7,7 +7,7 @@ export type Rule = {
 export const generalRules: Rule[] = [
   {
     id: "g1",
-    text: "Only for BCA, BSC and undergraduate students.",
+    text: "Only for BCA, BSC students.",
     icon: "→",
   },
   {
@@ -23,6 +23,11 @@ export const generalRules: Rule[] = [
   {
     id: "g4",
     text: "No registration fees - completely free entry.",
+    icon: "→",
+  },
+  {
+    id: "g5",
+    text: "Accommodations, if required, will be provided to outside participants upon prior request. Please submit your request to Leander Crasto, Student Coordinator, on or before 5th March 2026.Mobile: 8861718464.Email: epitome@staloysius.ac.in",
     icon: "→",
   },
 ];
@@ -58,4 +63,5 @@ export const additionalRules: Rule[] = [
     text: "Follow the code of conduct and respect fellow participants.",
     icon: "→",
   },
+ 
 ];
