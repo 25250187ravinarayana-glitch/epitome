@@ -145,7 +145,7 @@ export const LandingVideo = memo(() => {
 
       {/* College Logo */}
       <a
-        href="https://drive.google.com/file/d/1F9nqUA9ZRwgPo5ZsZwWaXTZv61b7h6m8/view?usp=sharing"
+        href={process.env.NEXT_PUBLIC_AIMIT_BROCHURE }
         target="_blank"
         rel="noopener noreferrer"
         className="absolute left-4 top-4 z-20 h-20 w-40 md:h-24 md:w-48 lg:h-28 lg:w-56 cursor-pointer transition-transform hover:scale-110"
