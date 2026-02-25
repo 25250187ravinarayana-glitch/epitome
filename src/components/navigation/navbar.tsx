@@ -72,8 +72,8 @@ export function NavigationBar() {
   const [open, setOpen] = React.useState(false);
   const pathname = usePathname();
 
-  // Hide navbar on event detail pages
-  if (pathname.startsWith("/event/")) {
+  // Hide navbar on event detail pages and aimit page
+  if (pathname.startsWith("/event/") || pathname === "/aimit") {
     return null;
   }
 

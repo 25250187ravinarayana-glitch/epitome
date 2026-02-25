@@ -98,7 +98,7 @@ export const CoordinatorsSection = () => {
           <h3 className="mb-8 text-center font-benguiat text-3xl font-bold text-red-700 md:text-4xl">
             Student Coordinators
           </h3>
-          <div className="grid grid-cols-2 gap-8 md:grid-cols-2 lg:grid-cols-4">
+          <div className="grid grid-cols-2 gap-4 md:gap-6 lg:gap-8 md:grid-cols-2 lg:grid-cols-4 max-w-7xl mx-auto justify-items-center">
             {studentCoordinators.map((coordinator, index) => (
               <CoordinatorCard key={index} coordinator={coordinator} />
             ))}
@@ -147,11 +147,11 @@ const CoordinatorCard = ({ coordinator }: { coordinator: Coordinator }) => {
   };
 
   return (
-    <div className="group relative overflow-hidden rounded-lg border-4 border-st-cream bg-st-cream shadow-2xl transition-all duration-300 hover:scale-105 hover:shadow-st-red/50">
+    <div className="group relative overflow-hidden rounded-lg border-2 md:border-4 border-st-cream bg-st-cream shadow-2xl transition-all duration-300 hover:scale-105 hover:shadow-st-red/50 w-full max-w-[280px] mx-auto">
       {/* Card Content */}
-      <div className="relative p-6">
+      <div className="relative p-3 md:p-6">
         {/* Profile Image Placeholder */}
-        <div className="relative mx-auto mb-4 h-32 w-32 overflow-hidden rounded-full border-4 border-st-red bg-st-darker">
+        <div className="relative mx-auto mb-3 md:mb-4 h-20 w-20 md:h-32 md:w-32 overflow-hidden rounded-full border-2 md:border-4 border-st-red bg-st-darker">
           {coordinator.image ? (
             <Image
               src={coordinator.image}
@@ -161,7 +161,7 @@ const CoordinatorCard = ({ coordinator }: { coordinator: Coordinator }) => {
             />
           ) : (
             <div className="flex h-full w-full items-center justify-center">
-              <span className="font-benguiat text-4xl text-st-cream">
+              <span className="font-benguiat text-2xl md:text-4xl text-st-cream">
                 {coordinator.name.charAt(0)}
               </span>
             </div>
@@ -169,31 +169,31 @@ const CoordinatorCard = ({ coordinator }: { coordinator: Coordinator }) => {
         </div>
 
         {/* Name */}
-        <h4 className="mb-2 text-center font-benguiat text-xl font-bold text-st-black">
+        <h4 className="mb-1 md:mb-2 text-center font-benguiat text-sm md:text-xl font-bold text-st-black leading-tight">
           {coordinator.name}
         </h4>
 
         {/* Role */}
-        <p className="mb-4 text-center font-mono text-sm text-st-darker">
+        <p className="mb-2 md:mb-4 text-center font-mono text-xs md:text-sm text-st-darker">
           {coordinator.role}
         </p>
 
         {/* Contact Info */}
-        <div className="space-y-2">
+        <div className="space-y-1.5 md:space-y-2">
           {coordinator.phone && (
             <button
               onClick={handleCopyPhone}
-              className="flex w-full items-center justify-center gap-2 rounded bg-st-red px-4 py-2 font-mono text-sm text-white transition-all hover:bg-st-red-light"
+              className="flex w-full items-center justify-center gap-1 md:gap-2 rounded bg-st-red px-2 md:px-4 py-1.5 md:py-2 font-mono text-xs md:text-sm text-white transition-all hover:bg-st-red-light"
             >
               {copied ? (
                 <>
-                  <Check size={16} />
-                  Copied!
+                  <Check className="w-3 h-3 md:w-4 md:h-4" />
+                  <span className="text-xs md:text-sm">Copied!</span>
                 </>
               ) : (
                 <>
-                  <Copy size={16} />
-                  {coordinator.phone}
+                  <Copy className="w-3 h-3 md:w-4 md:h-4" />
+                  <span className="text-xs md:text-sm">{coordinator.phone}</span>
                 </>
               )}
             </button>
@@ -201,10 +201,10 @@ const CoordinatorCard = ({ coordinator }: { coordinator: Coordinator }) => {
           {coordinator.email && (
             <a
               href={`mailto:${coordinator.email}`}
-              className="flex items-center justify-center gap-2 rounded bg-st-darker px-4 py-2 font-mono text-sm text-white transition-all hover:bg-st-black"
+              className="flex items-center justify-center gap-1 md:gap-2 rounded bg-st-darker px-2 md:px-4 py-1.5 md:py-2 font-mono text-xs md:text-sm text-white transition-all hover:bg-st-black"
             >
-              <Mail size={16} />
-              Email
+              <Mail className="w-3 h-3 md:w-4 md:h-4" />
+              <span className="text-xs md:text-sm">Email</span>
             </a>
           )}
         </div>

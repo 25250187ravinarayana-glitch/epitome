@@ -9,8 +9,12 @@ export default function AIMITPage() {
   const router = useRouter();
 
   const handleBrochureDownload = () => {
-    // TODO: Add actual brochure download link
-    window.open("https://drive.google.com/file/d/1F9nqUA9ZRwgPo5ZsZwWaXTZv61b7h6m8/view?usp=sharing", "_blank");
+    const brochureUrl = process.env.NEXT_PUBLIC_AIMIT_BROCHURE;
+    if (brochureUrl) {
+      window.open(brochureUrl, "_blank");
+    } else {
+      console.error("Brochure URL not configured");
+    }
   };
 
   return (
@@ -52,7 +56,7 @@ export default function AIMITPage() {
           <div className="mb-12 flex flex-col items-center text-center">
             <div className="relative mb-6 h-32 w-32 md:h-40 md:w-40">
               <Image
-                src="/clg/clglogo.png"
+                src="/clg/clglogo2.png"
                 alt="AIMIT Logo"
                 fill
                 className="object-contain"
