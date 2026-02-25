@@ -204,7 +204,7 @@ export const eventsData: Event[] = [
     title: "Upside Down Rhythms: Waves of Rhythm, Steps of Grace",
     description:
       "The Cultural Runway is a vibrant celebration that blends the elegance of a fashion showcase with the energy of dance. Each team represents an Indian cultural theme through authentic traditional attire and expressive performances. The event begins with participants walking the ramp, presenting the beauty and heritage of their cultural costumes. This is followed by a lively dance performance that reflects the music, spirit, and identity of their chosen tradition. Bringing together fashion, rhythm, and culture on one stage, The Cultural Runway celebrates India's unity in diversity in a colorful and captivating showcase.",
-    logo: "/pfp/culturalpfp.png",
+    logo: "/pfp/up.png",
     titleimg: "/titles/cultural logo.png",
     image: "/images/dance.png",
     date: "March 10, 2026",
