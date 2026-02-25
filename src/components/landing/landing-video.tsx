@@ -148,10 +148,10 @@ export const LandingVideo = memo(() => {
         href="https://drive.google.com/file/d/1F9nqUA9ZRwgPo5ZsZwWaXTZv61b7h6m8/view?usp=sharing"
         target="_blank"
         rel="noopener noreferrer"
-        className="absolute left-4 top-4 z-20 h-16 w-16 md:h-20 md:w-20 cursor-pointer transition-transform hover:scale-110"
+        className="absolute left-4 top-4 z-20 h-20 w-40 md:h-24 md:w-48 lg:h-28 lg:w-56 cursor-pointer transition-transform hover:scale-110"
       >
         <Image
-          src="/clg/clglogo.png"
+          src="/clg/clglogo2.png"
           alt="College Logo"
           fill
           className="object-contain"
@@ -200,8 +200,8 @@ export const LandingVideo = memo(() => {
         </div>
 
         {/* Subtitle */}
-        <p className="mt-8 text-center font-mono text-lg text-st-text-dim md:text-xl">
-          An intercollegiate fest
+        <p className="mt-4 text-center font-mono text-m text-st-text md:text-m">
+          IT FEST FOR UG STUDENTS
         </p>
 
         {/* Event Date */}
@@ -210,7 +210,7 @@ export const LandingVideo = memo(() => {
         </p>
 
         {/* Organized By */}
-        <p className="mt-6 font-mono text-xs text-st-text-dim">
+        <p className="mt-4 font-mono text-m text-st-text">
           Organised by AIMIT
         </p>
       </div>

@@ -27,7 +27,7 @@ export const generalRules: Rule[] = [
   },
   {
     id: "g5",
-    text: "Accommodations, if required, will be provided to outside participants upon prior request. Please submit your request to Leander Crasto, Student Coordinator, on or before 5th March 2026.Mobile: 8861718464.Email: epitome@staloysius.ac.in",
+    text: "Accommodations, if required, will be provided to outside participants upon prior request. Please submit your request to Leander Crasto, Student Coordinator, on or before 5th March 2026.\nMobile: 8861718464.\nEmail: epitome@staloysius.ac.in",
     icon: "→",
   },
 ];

@@ -36,14 +36,16 @@ export const MapSection = () => {
 
         {/* Map Container */}
         <div className="mx-auto max-w-4xl">
-          <div className="overflow-hidden rounded-lg border-4 border-st-red shadow-2xl">
+          <div className="relative overflow-hidden rounded-lg border-4 border-st-red shadow-2xl" style={{ paddingBottom: '56.25%', height: 0 }}>
             <iframe
-              src="https://www.google.com/maps?q=St+Aloysius+Institute+of+Management+and+Information+Technology,+Beeri,+Kotekkar,+Mangaluru&output=embed"
-              className="h-96 w-full border-0"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3698.306659420099!2d74.86378297483813!3d12.790111787508824!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba35c25b9787073%3A0x653d5e5dc9d82834!2sSt%20Aloysius%20Institute%20of%20Management%20%26%20Information%20Technology%20(AIMIT)!5e1!3m2!1sen!2sin!4v1771984664402!5m2!1sen!2sin"
+              className="absolute top-0 left-0 w-full h-full border-0"
+              style={{ border: 0 }}
               allowFullScreen
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
               title="Event Location Map"
+              sandbox="allow-scripts allow-same-origin allow-popups"
             />
           </div>
 

@@ -42,9 +42,9 @@ export const RulesSection = () => {
               {generalRules.map((rule: Rule) => (
                 <li
                   key={rule.id}
-                  className="flex items-start gap-3 font-mono text-st-text"
+                  className="flex items-start gap-3 font-mono text-st-text whitespace-pre-wrap"
                 >
-                  <span className="text-2xl">{rule.icon}</span>
+                  <span className="text-2xl mt-[-4px]">{rule.icon}</span>
                   <span className="flex-1">{rule.text}</span>
                 </li>
               ))}
@@ -65,9 +65,9 @@ export const RulesSection = () => {
               {additionalRules.map((rule: Rule) => (
                 <li
                   key={rule.id}
-                  className="flex items-start gap-3 font-mono text-st-text"
+                  className="flex items-start gap-3 font-mono text-st-text whitespace-pre-wrap"
                 >
-                  <span className="text-2xl">{rule.icon}</span>
+                  <span className="text-2xl mt-[-4px]">{rule.icon}</span>
                   <span className="flex-1">{rule.text}</span>
                 </li>
               ))}

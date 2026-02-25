@@ -88,11 +88,14 @@ export const RegistrationSection = () => {
               </div>
 
               {/* Download CTA */}
-              <div className="rounded-lg border-2 border-st-darker bg-st-darker/10 py-2 text-center">
-                <p className="font-benguiat text-lg text-st-black md:text-xl">
-                  CLICK TO DOWNLOAD
-                </p>
-              </div>
+              <button className="w-full rounded-lg border-2 border-st-darker bg-st-red py-3 text-center transition-all duration-300 hover:bg-st-darker hover:scale-105 active:scale-95">
+                <div className="flex items-center justify-center gap-2">
+                  <Download className="h-5 w-5 text-white" />
+                  <p className="font-benguiat text-lg text-white md:text-xl">
+                    DOWNLOAD NOW
+                  </p>
+                </div>
+              </button>
 
               {/* Event Name Footer */}
               <div className="mt-3 text-center">
@@ -129,7 +132,7 @@ export const RegistrationSection = () => {
             </button>
 
             {/* Additional Info */}
-            <div className="space-y-1.5 font-mono text-xs text-st-text-dim md:text-sm">
+            <div className="space-y-1.5 font-mono text-m text-st-text md:text-sm">
               <p className="flex items-center gap-2">
                 <span className="text-st-red">→</span>
                 No registration fees
@@ -148,7 +151,7 @@ export const RegistrationSection = () => {
 
         {/* Bottom Contact Info */}
         <div className="mt-12 text-center">
-          <p className="font-mono text-sm text-st-text-dim">
+          <p className="font-mono text-sm text-st-text">
             For any queries or help, contact us at{" "}
             <a
               href="mailto:epitome@staloysius.ac.in"

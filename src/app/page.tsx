@@ -29,6 +29,12 @@ const SponsorsSection = dynamic(
     )
 );
 
+const ScheduleSelection = dynamic(
+  () =>
+    import("@/components/schedule/eventschedule").then(
+      (mod) => mod.EventSchedule)
+);
+
 const MapSection = dynamic(
   () =>
     import("@/components/map/map-section").then((mod) => mod.MapSection)
@@ -55,6 +61,7 @@ export default function Home() {
       <EventsSection />
       <RulesSection />
       {/*<SponsorsSection />*/}
+      <ScheduleSelection />
       <MapSection />
       <RegistrationSection />
       <CoordinatorsSection />

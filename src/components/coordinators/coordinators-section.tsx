@@ -83,7 +83,7 @@ export const CoordinatorsSection = () => {
 
         {/* Faculty Coordinators */}
         <div className="mb-16">
-          <h3 className="mb-8 text-center font-benguiat text-3xl font-bold text-st-red md:text-4xl">
+          <h3 className="mb-8 text-center font-benguiat text-3xl font-bold text-red-700 md:text-4xl">
             Faculty Coordinators
           </h3>
           <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-2 max-w-4xl mx-auto">
@@ -95,7 +95,7 @@ export const CoordinatorsSection = () => {
 
         {/* Student Coordinators */}
         <div>
-          <h3 className="mb-8 text-center font-benguiat text-3xl font-bold text-st-red md:text-4xl">
+          <h3 className="mb-8 text-center font-benguiat text-3xl font-bold text-red-700 md:text-4xl">
             Student Coordinators
           </h3>
           <div className="grid grid-cols-2 gap-8 md:grid-cols-2 lg:grid-cols-4">

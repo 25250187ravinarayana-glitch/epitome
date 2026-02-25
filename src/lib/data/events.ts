@@ -9,7 +9,7 @@ export type Event = {
   time: string;
   venue: string;
   registerLink: string;
-  category: "coding and debugging" | "cultural" | "quiz" | "gaming" | "surprise"|"web designing";
+  category: "CODING AND DEBUGGING" | "CULTURAL" | "QUIZ" | "GAMING" | "SURPRISE EVENT"|"WEB DESIGNING";
   teamSize: string; // Team size information
   rules: string[]; // Array of rule strings for bullet points
   coordinators: Array<{
@@ -33,13 +33,13 @@ export const eventsData: Event[] = [
     description:
       "Step into the world where creativity meets technology! The Web Designing event challenges you to transform ideas into visually stunning and user-friendly websites. Whether you're a beginner or a passionate designer, this is your chance to showcase your design thinking, layout skills and front-end creativity under exciting real-world challenges. Work as a team, think fast, design smart and let your website speak for you.",
     logo: "/pfp/Webpfp.png",
-    titleimg: "/titles/webevent.png",
+    titleimg: "/titles/strangerscreens.png",
     image: "/images/web.png",
     date: "March 10, 2026",
     time: "",
     venue: "",
     registerLink: REGISTRATION_LINK,
-    category: "web designing",
+    category: "WEB DESIGNING",
     teamSize: "2 members",
     rules: [
       "Participants must report on time for all rounds",
@@ -100,11 +100,11 @@ export const eventsData: Event[] = [
     time: "",
     venue: "",
     registerLink: REGISTRATION_LINK,
-    category: "gaming",
+    category: "GAMING",
     teamSize: "4 members",
     rules: [
       "Gaming tournament featuring three titles: BGMI, FIFA, and Mortal Kombat",
-      "Includes one mobile game (BGMI), one PC game (FIFA), and one console game (Mortal Kombat)",
+      "Includes one mobile game (BGMI), one PC game (Mortal Kombat), and one console game (fifa)",
       "Total 24 teams allowed to participate",
       "Each team must have 4 members",
       "All teams will compete in all three games",
@@ -160,7 +160,7 @@ export const eventsData: Event[] = [
     time: "",
     venue: "",
     registerLink: REGISTRATION_LINK,
-    category: "coding and debugging",
+    category: "CODING AND DEBUGGING",
     teamSize: "2 members",
     rules: [
       "Participants must have knowledge of programming languages such as c, python and java",
@@ -176,7 +176,7 @@ export const eventsData: Event[] = [
         email: "",
       },
       {
-        name: "K S Panka",
+        name: "K S Pankaj",
         phone: "8550855771",
         email: "",
       },
@@ -193,7 +193,7 @@ export const eventsData: Event[] = [
         email: "",
       },
       {
-        name:"Dr Jeevan L j Pinto",
+        name:"Dr Jeevan L J Pinto",
         phone: "",
         email: "",
       }
@@ -203,7 +203,7 @@ export const eventsData: Event[] = [
     id: "upside-down-rhythms",
     title: "Upside Down Rhythms: Waves of Rhythm, Steps of Grace",
     description:
-      "The Cultural Runway is a vibrant celebration that blends the elegance of a fashion showcase with the energy of dance. Each team represents an Indian state or cultural theme through authentic traditional attire and expressive performances. The event begins with participants walking the ramp, presenting the beauty and heritage of their cultural costumes. This is followed by a lively dance performance that reflects the music, spirit, and identity of their chosen tradition. Bringing together fashion, rhythm, and culture on one stage, The Cultural Runway celebrates India's unity in diversity in a colorful and captivating showcase.",
+      "The Cultural Runway is a vibrant celebration that blends the elegance of a fashion showcase with the energy of dance. Each team represents an Indian cultural theme through authentic traditional attire and expressive performances. The event begins with participants walking the ramp, presenting the beauty and heritage of their cultural costumes. This is followed by a lively dance performance that reflects the music, spirit, and identity of their chosen tradition. Bringing together fashion, rhythm, and culture on one stage, The Cultural Runway celebrates India's unity in diversity in a colorful and captivating showcase.",
     logo: "/pfp/culturalpfp.png",
     titleimg: "/titles/cultural logo.png",
     image: "/images/dance.png",
@@ -211,13 +211,13 @@ export const eventsData: Event[] = [
     time: "",
     venue: "",
     registerLink: REGISTRATION_LINK,
-    category: "cultural",
+    category: "CULTURAL",
     teamSize: "6-10 members",
     rules: [
       "A team can consist of minimum 6 and maximum 10 members",
       "Total time limit is 5 minutes (1 minute for stage preparation and 4 minutes for performance)",
       "Exceeding the time limit will lead to negative marking",
-      "Audio should be submitted to the desk prior to the performance in a pen drive. A copy must be submitted 3 days prior to the event",
+      "Participants must submit an MP3 copy of the audio three days before the event and bring it on a pen drive to the desk before the performance.",
       "Props are allowed, but they must be safe and easy to handle",
       "Use of fire, water, fireworks, glass, sharp objects, or any hazardous materials is strictly prohibited",
       "Costumes should be decent and appropriate as per college guidelines",
@@ -256,7 +256,7 @@ export const eventsData: Event[] = [
     staffcoordinators:[
       {
         name: "Dr Rakesh Kumar B",
-        phone: "9844198603",
+        phone: "",
         email: "",
       },
       {
@@ -277,7 +277,7 @@ export const eventsData: Event[] = [
     time: "",
     venue: "",
     registerLink: REGISTRATION_LINK,
-    category: "quiz",
+    category: "QUIZ",
     teamSize: "2 members",
     rules: [
       "The quiz will be conducted in 2 rounds",
@@ -298,24 +298,24 @@ export const eventsData: Event[] = [
     coordinators: [
       
       {
-        name: "MS AARLYN RIONA LOBO",
+        name: "AARLYN RIONA LOBO",
         phone: "7795928064",
         email: "",
       },
       {
-        name: "MS SEDHULAXSHMI M S",
+        name: "SEDULAXSHMI M S",
         phone: "9945162147",
         email: "",
       },
       {
-        name: "MR CHARAN KUMAR",
+        name: "CHARAN KUMAR",
         phone: "7676331186",
         email: "",
       },
     ],
     staffcoordinators:[{
         name: "MS VANITHA T",
-        phone: "9964412532",
+        phone: "",
         email: "",
       },
       {
@@ -336,7 +336,7 @@ export const eventsData: Event[] = [
     time: "",
     venue: "",
     registerLink: REGISTRATION_LINK,
-    category: "surprise",
+    category: "SURPRISE EVENT",
     teamSize: "2 members",
     rules: [
       "On-the-spot mystery challenges will be conducted across both rounds",
@@ -370,7 +370,7 @@ export const eventsData: Event[] = [
     ],
     staffcoordinators:[{
         name: "Ms Amita V",
-        phone: "8762573988",
+        phone: "",
         email: "",
       },
       {

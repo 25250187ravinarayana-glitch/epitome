@@ -80,10 +80,11 @@ export default function AIMITPage() {
             3.67.
             </p>
             <p>
-            AIMIT offers MBA and IT programmes designed with strong career prospects
-            in mind. With industry exposure, high-end facilities, and access to a
-            growing alumni network, the institution provides transformative
-            education with real-world application.
+            AIMIT offers MBA and IT programmes with strong career prospects. 
+            The IT stream features specialised areas including Data Science, 
+            Artificial Intelligence, Software Technology, and MCA. Supported by
+             industry exposure, advanced facilities, and a strong alumni network, 
+             the institution delivers transformative education with real-world impact.
             </p>
             <p>
             Guided by the Jesuit motto “Lucet et Ardet” (Shine to Enkindle), the

@@ -103,11 +103,7 @@ export default function EventDetailPage() {
                   <strong className="text-white">Team Size:</strong> {event.teamSize}
                 </p>
               </div>
-              <div>
-                <p className="font-mono text-st-text">
-                  <strong className="text-white">Venue:</strong> {event.venue}
-                </p>
-              </div>
+              
               <div>
                 <p className="font-mono text-st-text">
                   <strong className="text-white">Category:</strong>{" "}

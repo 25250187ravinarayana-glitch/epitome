@@ -10,6 +10,7 @@ import {
   FileText,
   Award,
   MapPin,
+  Clock,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import {
@@ -31,12 +32,29 @@ type NavItemProps = {
 
 const NavItem = ({ icon, label, href, setOpen }: NavItemProps) => {
   const handleClick = () => {
+    // Close the drawer first
     setOpen(false);
-    // Smooth scroll to section
-    const element = document.querySelector(href);
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
-    }
+    
+    // Wait for drawer animation to complete before scrolling (300ms)
+    setTimeout(() => {
+      const element = document.querySelector(href);
+      if (element) {
+        // Get the element's position
+        const elementPosition = element.getBoundingClientRect().top;
+        const offsetPosition = elementPosition + window.pageYOffset;
+
+        // Use window.scrollTo for better iOS compatibility
+        window.scrollTo({
+          top: offsetPosition,
+          behavior: "smooth"
+        });
+
+        // Fallback for older iOS versions that don't support smooth behavior
+        if (!('scrollBehavior' in document.documentElement.style)) {
+          window.scrollTo(0, offsetPosition);
+        }
+      }
+    }, 350);
   };
 
   return (
@@ -73,11 +91,11 @@ export function NavigationBar() {
           </DrawerClose>
           <div className="mx-auto w-full max-w-sm p-4">
             <DrawerHeader className="flex-center flex-col gap-2">
-              <DrawerTitle className="glow-red font-benguiat text-4xl text-st-red">
+              <DrawerTitle className="glow-red font-benguiat text-4xl text-white">
                 EPITOME
               </DrawerTitle>
               <DrawerDescription className="text-st-text-dim">
-                Strange Events Await
+                
               </DrawerDescription>
             </DrawerHeader>
 
@@ -99,6 +117,12 @@ export function NavigationBar() {
                 icon={<FileText />}
                 label="Rules"
                 href="#rules"
+              />
+              <NavItem
+                setOpen={setOpen}
+                icon={<Clock />}
+                label="Schedule"
+                href="#schedule"
               />
               {/*<NavItem
                 setOpen={setOpen}
