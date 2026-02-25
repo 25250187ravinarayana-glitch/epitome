@@ -8,7 +8,7 @@ export const EventSchedule = () => {
     <section id="schedule" className="py-6 sm:py-8 md:py-10 lg:py-12 bg-gradient-to-b from-black to-red-950/20">
       <div className="container mx-auto px-1 sm:px-2 md:px-4">
         <div className="flex justify-center mb-4 sm:mb-6 md:mb-8 lg:mb-12">
-          <div className="relative w-full max-w-4xl h-20 sm:h-32 md:h-40 lg:h-64 xl:h-72 2xl:h-80">
+          <div className="relative w-full max-w-4xl h-20 sm:h-32 md:h-40 lg:h-54 xl:h-54 2xl:h-80">
             <Image
               src="/titles/eventschedule.png"
               alt="Event Schedule"
